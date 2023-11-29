@@ -100,11 +100,11 @@ function crearPersona() {
     anioDeNacimiento
   );
   personas.push(nuevaPersona); 
-  alert("Persona creada exitosamente!");
+  alert("La persona fue guardada correctamente");
 }
 
 function mostrarDatosPersona() {
-  const nombreBuscado = prompt("Ingrese el nombreApellido de la persona:");
+  const nombreBuscado = prompt("Ingrese el Nombre y Apellido de la persona:");
   const personaEncontrada = personas.find(
     (persona) => persona.nombreApellido === nombreBuscado
   );
