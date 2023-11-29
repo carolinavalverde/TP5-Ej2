@@ -36,7 +36,7 @@
           />
         </div>
         <div class="col-lg-6 col-md-6 m-3">
-          <form id="personaForm" class="mb-3">
+          <form id="formularioPersona" class="mb-3">
             <div>
               <div>
                 <label for="nombreApellido" class="form-label"
@@ -80,7 +80,6 @@
                 <label for="sexo" class="form-label">Sexo</label>
                 <select
                   class="form-select"
-                  aria-label="Default select example"
                   class="form-control"
                   placeholder="ej.: Masculino"
                   minlength="8"
@@ -108,7 +107,7 @@
                 <label for="altura" class="form-label">Altura</label>
                 <input
                   type="number"
-                  id="edad"
+                  id="altura"
                   class="form-control"
                   placeholder="altura en m - ej: 1.55"
                   step="0.01"
@@ -142,17 +141,17 @@
           </form>
         </div>
       </section>
-      <section class="container mb-5 d-flex align-content-center">
+      <section class="container mb-5 d-flex">
         <button
           type="button"
-          class="botonPrincipal mx-2"
+          class="botonPrincipal mx-2 col-lg-6 col-md-6 col-sm-12"
           onclick="mostrarGeneracion()"
         >
           Mostrar Generación
         </button>
         <button
           type="button"
-          class="botonPrincipal mx-2"
+          class="botonPrincipal mx-2 col-lg-6 col-md-6 col-sm-12"
           onclick="esMayorDeEdad()"
         >
           Es Mayor de Edad

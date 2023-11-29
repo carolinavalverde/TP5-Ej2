@@ -99,7 +99,7 @@ function crearPersona() {
     altura,
     anioDeNacimiento
   );
-  personas.push(nuevaPersona); // Add the new person to the array
+  personas.push(nuevaPersona); 
   alert("Persona creada exitosamente!");
 }
 
