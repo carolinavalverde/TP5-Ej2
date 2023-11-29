@@ -10,7 +10,8 @@ class Persona {
   }
 
   mostrarDatos() {
-    const { nombreApellido, edad, dni, sexo, peso, altura, anioDeNacimiento } = this;
+    const { nombreApellido, edad, dni, sexo, peso, altura, anioDeNacimiento } =
+      this;
     console.log(`
         Nombre: ${this.nombreApellido}
         Edad: ${this.edad} años
@@ -99,7 +100,7 @@ function crearPersona() {
     altura,
     anioDeNacimiento
   );
-  personas.push(nuevaPersona); 
+  personas.push(nuevaPersona);
   alert("La persona fue guardada correctamente");
 }
 
