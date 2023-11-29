@@ -1,6 +1,6 @@
 class Persona {
-  constructor(nombre, edad, dni, sexo, peso, altura, anioDeNacimiento) {
-    this.nombre = nombre;
+  constructor(nombreApellido, edad, dni, sexo, peso, altura, anioDeNacimiento) {
+    this.nombreApellido = nombreApellido;
     this.edad = edad;
     this.dni = dni;
     this.sexo = sexo;
@@ -10,9 +10,9 @@ class Persona {
   }
 
   mostrarDatos() {
-    const { nombre, edad, dni, sexo, peso, altura, anioDeNacimiento } = this;
+    const { nombreApellido, edad, dni, sexo, peso, altura, anioDeNacimiento } = this;
     console.log(`
-        Nombre: ${this.nombre}
+        Nombre: ${this.nombreApellido}
         Edad: ${this.edad} años
         DNI: ${this.dni}
         Sexo: ${this.sexo}
@@ -21,7 +21,7 @@ class Persona {
         Año de Nacimiento: ${this.anioDeNacimiento}
       `);
     document.write(`<ul>
-        <li>Nombre: ${this.nombre}</li>
+        <li>Nombre: ${this.nombreApellido}</li>
         <li>Edad: ${this.edad} años</li>
         <li> DNI: ${this.dni}</li>
         <li>Sexo: ${this.sexo}</li>
@@ -62,10 +62,10 @@ class Persona {
     }
 
     console.log(
-      `${this.nombre} pertenece a la generación ${generacion}. Rasgo característico: ${rasgoCaracteristico}.`
+      `${this.nombreApellido} pertenece a la generación ${generacion}. Rasgo característico: ${rasgoCaracteristico}.`
     );
     document.write(`<p>
-          ${this.nombre} pertenece a la Generación ${generacion}. Rasgo característico: ${rasgoCaracteristico}.
+          ${this.nombreApellido} pertenece a la Generación ${generacion}. Rasgo característico: ${rasgoCaracteristico}.
        </p>`);
   }
 
@@ -80,7 +80,7 @@ class Persona {
 const personas = [];
 
 function crearPersona() {
-  const nombre = document.getElementById("nombre").value;
+  const nombreApellido = document.getElementById("nombreApellido").value;
   const edad = parseInt(document.getElementById("edad").value);
   const dni = document.getElementById("dni").value;
   const sexo = document.getElementById("sexo").value;
@@ -91,7 +91,7 @@ function crearPersona() {
   );
 
   const nuevaPersona = new Persona(
-    nombre,
+    nombreApellido,
     edad,
     dni,
     sexo,
@@ -104,9 +104,9 @@ function crearPersona() {
 }
 
 function mostrarDatosPersona() {
-  const nombreBuscado = prompt("Ingrese el nombre de la persona:");
+  const nombreBuscado = prompt("Ingrese el nombreApellido de la persona:");
   const personaEncontrada = personas.find(
-    (persona) => persona.nombre === nombreBuscado
+    (persona) => persona.nombreApellido === nombreBuscado
   );
 
   if (personaEncontrada) {
