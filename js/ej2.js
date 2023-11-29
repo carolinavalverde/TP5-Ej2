@@ -46,7 +46,7 @@ class Persona {
         break;
       case this.anioDeNacimiento >= 1969 && this.anioDeNacimiento <= 1980:
         generacion = "X";
-        rasgoCaracteristico = "Obseción por el éxito";
+        rasgoCaracteristico = "Obsesión por el éxito";
         break;
       case this.anioDeNacimiento >= 1981 && this.anioDeNacimiento <= 1993:
         generacion = "Y";
@@ -113,6 +113,32 @@ function mostrarDatosPersona() {
   if (personaEncontrada) {
     personaEncontrada.mostrarDatos();
     personaEncontrada.mostrarGeneracion();
+    personaEncontrada.esMayorDeEdad();
+  } else {
+    alert("Persona no encontrada.");
+  }
+}
+
+function mostrarGeneracionPorBoton() {
+  const nombreBuscado = prompt("Ingrese el Nombre y Apellido de la persona:");
+  const personaEncontrada = personas.find(
+    (persona) => persona.nombreApellido === nombreBuscado
+  );
+
+  if (personaEncontrada) {
+    personaEncontrada.mostrarGeneracion();
+  } else {
+    alert("Persona no encontrada.");
+  }
+}
+
+function mostrarEsMayorDeEdadPorBoton() {
+  const nombreBuscado = prompt("Ingrese el Nombre y Apellido de la persona:");
+  const personaEncontrada = personas.find(
+    (persona) => persona.nombreApellido === nombreBuscado
+  );
+
+  if (personaEncontrada) {
     personaEncontrada.esMayorDeEdad();
   } else {
     alert("Persona no encontrada.");
