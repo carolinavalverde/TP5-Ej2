@@ -113,6 +113,10 @@ function mostrarGeneracionPorBoton() {
 
   if (personaEncontrada) {
     personaEncontrada.mostrarGeneracion();
+    console.log(personaEncontrada.mostrarGeneracion());
+    document.getElementsByTagName(personaEncontrada.mostrarGeneracion).innerHTML += personaEncontrada.mostrarGeneracion();
+    document.getElementsByTagName(personaEncontrada.mostrarGeneracion).className = `text-primary bg-danger`;
+  
   } else {
     alert("Persona no encontrada.");
   }
