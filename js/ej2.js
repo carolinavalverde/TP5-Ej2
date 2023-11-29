@@ -12,15 +12,6 @@ class Persona {
   mostrarDatos() {
     const { nombreApellido, edad, dni, sexo, peso, altura, anioDeNacimiento } =
       this;
-    console.log(`
-        Nombre: ${this.nombreApellido}
-        Edad: ${this.edad} años
-        DNI: ${this.dni}
-        Sexo: ${this.sexo}
-        Peso: ${this.peso} kg
-        Altura: ${this.altura} m
-        Año de Nacimiento: ${this.anioDeNacimiento}
-      `);
     document.write(`<ul>
         <li>Nombre: ${this.nombreApellido}</li>
         <li>Edad: ${this.edad} años</li>
@@ -61,10 +52,6 @@ class Persona {
         rasgoCaracteristico = "Nativos digitales";
         break;
     }
-
-    console.log(
-      `${this.nombreApellido} pertenece a la generación ${generacion}. Rasgo característico: ${rasgoCaracteristico}.`
-    );
     document.write(`<p>
           ${this.nombreApellido} pertenece a la Generación ${generacion}. Rasgo característico: ${rasgoCaracteristico}.
        </p>`);
@@ -73,7 +60,6 @@ class Persona {
   esMayorDeEdad() {
     const mensaje =
       this.edad >= 18 ? "Es mayor de edad." : "No es mayor de edad.";
-    console.log(mensaje);
     document.write(mensaje);
   }
 }
