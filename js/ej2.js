@@ -12,7 +12,7 @@ class Persona {
   mostrarDatos() {
     const { nombreApellido, edad, dni, sexo, peso, altura, anioDeNacimiento } =
       this;
-    document.write(`<ul>
+    return `<ul>
         <li>Nombre: ${this.nombreApellido}</li>
         <li>Edad: ${this.edad} años</li>
         <li> DNI: ${this.dni}</li>
@@ -20,7 +20,7 @@ class Persona {
         <li>Peso: ${this.peso} kg</li>
         <li>Altura: ${this.altura} m</li>
         <li>Año de Nacimiento: ${this.anioDeNacimiento}</li>
-        </ul>`);
+        </ul>`;
   }
 
   mostrarGeneracion() {
@@ -52,15 +52,15 @@ class Persona {
         rasgoCaracteristico = "Nativos digitales";
         break;
     }
-    document.write(`<p>
+    return `<p>
           ${this.nombreApellido} pertenece a la Generación ${generacion}. Rasgo característico: ${rasgoCaracteristico}.
-       </p>`);
+       </p>`;
   }
 
   esMayorDeEdad() {
     const mensaje =
       this.edad >= 18 ? "Es mayor de edad." : "No es mayor de edad.";
-    document.write(mensaje);
+    return mensaje;
   }
 }
 
@@ -97,9 +97,10 @@ function mostrarDatosPersona() {
   );
 
   if (personaEncontrada) {
-    personaEncontrada.mostrarDatos();
-    personaEncontrada.mostrarGeneracion();
-    personaEncontrada.esMayorDeEdad();
+    document.getElementById("mostrarDatosId").innerHTML +=
+      personaEncontrada.mostrarDatos();
+    document.getElementById("mostrarDatosId").className =
+      "text-dark display-6 my-3 mx-4 text-center";
   } else {
     alert("Persona no encontrada.");
   }
@@ -112,11 +113,10 @@ function mostrarGeneracionPorBoton() {
   );
 
   if (personaEncontrada) {
-    personaEncontrada.mostrarGeneracion();
-    console.log(personaEncontrada.mostrarGeneracion());
-    document.getElementsByTagName(personaEncontrada.mostrarGeneracion).innerHTML += personaEncontrada.mostrarGeneracion();
-    document.getElementsByTagName(personaEncontrada.mostrarGeneracion).className = `text-primary bg-danger`;
-  
+    document.getElementById("mostrarGeneracionId").innerHTML +=
+      personaEncontrada.mostrarGeneracion();
+    document.getElementById("mostrarGeneracionId").className =
+      "text-dark display-6 my-3 mx-4 text-center";
   } else {
     alert("Persona no encontrada.");
   }
@@ -129,7 +129,10 @@ function mostrarEsMayorDeEdadPorBoton() {
   );
 
   if (personaEncontrada) {
-    personaEncontrada.esMayorDeEdad();
+    document.getElementById("mostrarEsMayorDeEdadId").innerHTML +=
+      personaEncontrada.esMayorDeEdad();
+    document.getElementById("mostrarEsMayorDeEdadId").className =
+      "text-dark display-6 my-3 mx-4 text-center";
   } else {
     alert("Persona no encontrada.");
   }
